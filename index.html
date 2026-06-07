@@ -119,3 +119,180 @@
           transparent 0%,
           #7a4b16 12%,
           #c48b32 28%,
+          #f4c46a 50%,
+          #c48b32 72%,
+          #7a4b16 88%,
+          transparent 100%
+        );
+      border-radius: 999px;
+      box-shadow:
+        0 0 12px rgba(244, 196, 106, 0.8),
+        0 0 26px rgba(0, 0, 0, 0.95);
+      position: relative;
+    }
+
+    .divider-line::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: -4px;
+      transform: translateX(-50%);
+      width: 26px;
+      height: 10px;
+      border-radius: 999px;
+      background: radial-gradient(
+        circle at 50% 0%,
+        #fbe0a0 0%,
+        #f4c46a 40%,
+        #c48b32 80%
+      );
+      box-shadow:
+        0 0 10px rgba(244, 196, 106, 0.9),
+        0 0 20px rgba(0, 0, 0, 0.9);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .page {
+        padding: 2.5rem 1.25rem 3rem;
+      }
+
+      .section {
+        padding: 1.5rem 1.25rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .divider-line {
+        width: 72%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <div class="content">
+
+      <!-- HERO WITH BANNER IMAGE -->
+      <header class="hero">
+        <img src="assets/altalune banner.png" alt="Altalune Banner">
+      </header>
+
+      <!-- INTRO SECTION -->
+      <section class="section">
+        <p>
+          <span class="section-strong">
+            Altalune — your words, your world, a universe in your pocket.
+          </span>
+        </p>
+        <p>
+          Altalune is a creative operating system built for writers who want
+          power without surrendering ownership.
+        </p>
+        <p>
+          It doesn’t live in the cloud. It doesn’t lock you into subscriptions.
+          It doesn’t mine your imagination.
+        </p>
+        <p>
+          It lives with you — on your device, on your drive, in your pocket —
+          and nowhere else.
+        </p>
+      </section>
+
+      <div class="divider"><div class="divider-line"></div></div>
+
+      <!-- CONSTELLATION / STRUCTURE SECTION -->
+      <section class="section">
+        <p>
+          Altalune holds everything that makes your universe yours: your series,
+          your books, your characters, your lore, your timelines, your rules,
+          your voice.
+        </p>
+        <p>
+          All of it connected through a constellation‑based structure that
+          mirrors the way creators actually think.
+        </p>
+        <p>
+          And because Altalune runs from a portable drive with zero installation,
+          you can walk up to any computer, open your world, write, unplug, and
+          leave without a trace.
+        </p>
+        <p>
+          Your universe goes where you go.
+        </p>
+      </section>
+
+      <div class="divider"><div class="divider-line"></div></div>
+
+      <!-- PHILOSOPHY SECTION -->
+      <section class="section">
+        <div class="section-title">A philosophy built on sovereignty</div>
+        <p>
+          Altalune is built on three principles that never bend:
+        </p>
+        <p>
+          <span class="section-strong">Your creativity should never be trapped.</span><br />
+          Your worlds stay in your hands — not on someone else’s servers, not
+          behind a paywall, not inside a subscription cycle.
+        </p>
+        <p>
+          <span class="section-strong">Privacy is not optional.</span><br />
+          Your ideas are not data points. Your stories are not training
+          material. Your imagination is not a product.<br />
+          Altalune never sends your writing anywhere unless you choose to.
+        </p>
+        <p>
+          <span class="section-strong">Portability is freedom.</span><br />
+          A writer should be able to take their universe anywhere — a café, a
+          library, a borrowed laptop, a hotel business center.<br />
+          Altalune makes that possible. It is, quite literally, a universe in
+          your pocket.
+        </p>
+      </section>
+
+      <div class="divider"><div class="divider-line"></div></div>
+
+      <!-- WHY ALTALUNE STANDS ALONE -->
+      <section class="section">
+        <div class="section-title">Why Altalune stands alone</div>
+        <p>
+          Most writing tools live in the cloud, track your behavior, and scatter
+          your ideas across disconnected files.
+        </p>
+        <p>
+          Altalune does the opposite.
+        </p>
+        <p>
+          It runs entirely offline.<br />
+          It keeps your data on your device.<br />
+          It unifies your worlds into a single, intelligent system.<br />
+          And its AI learns your universe — not the internet’s.
+        </p>
+        <p>
+          Altalune isn’t another app.<br />
+          It’s a sovereign creative space built for people who think in systems,
+          build worlds, and need a tool that respects the scale of their
+          imagination.
+        </p>
+      </section>
+
+      <div class="divider"><div class="divider-line"></div></div>
+
+      <!-- WHO ALTALUNE IS FOR -->
+      <section class="section">
+        <div class="section-title">Who Altalune is for</div>
+        <p>
+          Altalune is for creators who want ownership, privacy, portability,
+          structure, intelligence, and beauty —
+        </p>
+        <p>
+          and who want a companion that understands their world instead of
+          reshaping it.
+        </p>
+      </section>
+
+    </div>
+  </div>
+</body>
+</html>
