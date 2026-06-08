@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Universe in Your Pocket — Altalune</title>
+
+    <style>
+        :root {
+            --bronze: #f4b86a;
+            --bronze-deep: #d89a4f;
+            --glow-outer: 0 0 22px rgba(244, 184, 106, 0.95);
+            --glow-inner: 0 0 8px rgba(244, 184, 106, 0.75);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: url("../assets/starfield.png") no-repeat center center fixed;
+            background-size: cover;
+            font-family: "Segoe UI", sans-serif;
+            color: var(--bronze);
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.65);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .title {
+            font-size: 3.4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--bronze);
+            text-shadow: var(--glow-outer), var(--glow-inner);
+        }
+
+        .subtitle {
+            font-size: 1.9rem;
+            font-weight: 600;
+            margin-bottom: 60px;
+            color: var(--bronze);
+            text-shadow: var(--glow-inner);
+        }
+
+        .section {
+            max-width: 760px;
+            margin: 0 auto 60px;
+            font-size: 1.35rem;
+            line-height: 1.7;
+            text-shadow: var(--glow-inner);
+        }
+
+        .logo {
+            margin: 60px auto 80px;
+            max-width: 360px;
+            filter: drop-shadow(0 0 18px rgba(244, 184, 106, 0.8));
+        }
+
+        a.back {
+            display: inline-block;
+            margin-top: 40px;
+            font-size: 1.3rem;
+            color: var(--bronze);
+            text-decoration: none;
+            text-shadow: var(--glow-inner);
+            transition: 0.3s ease;
+        }
+
+        a.back:hover {
+            text-shadow: var(--glow-outer), var(--glow-inner);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="overlay"></div>
+
+    <div class="container">
+
+        <img src="../assets/logo only.png" alt="Altalune Logo" class="logo">
+
+        <div class="title">A Universe in Your Pocket</div>
+        <div class="subtitle">Your creativity, sovereign and portable.</div>
+
+        <!-- PAIN -->
+        <div class="section">
+            Your ideas have never truly belonged to you.  
+            Every app demands an account.  
+            Every platform demands a subscription.  
+            Every cloud service demands your data.  
+            Your worlds live on servers you don’t control, behind logins you don’t own, inside systems that can disappear the moment a company decides they’re done supporting you.
+            <br><br>
+            Your creativity has been held hostage by the internet.
+            <br><br>
+            Altalune ends that.
+        </div>
+
+        <!-- PORTABILITY -->
+        <div class="section">
+            Your universe becomes portable.  
+            Not synced.  
+            Not streamed.  
+            Not stored “in the cloud.”  
+            <br><br>
+            <strong>Yours.</strong>
+            <br><br>
+            A self‑contained world that lives entirely on your device —  
+            your stories, your lore, your timelines, your characters, your rules, your voice, your AI, your constellation.
+            <br><br>
+            Everything you create stays with you.  
+            Everywhere you go.
+        </div>
+
+        <!-- PRIVACY -->
+        <div class="section">
+            Your universe becomes private.  
+            No servers.  
+            No accounts.  
+            No analytics.  
+            No tracking.  
+            No silent uploads.  
+            No “improving our service” pipelines.  
+            No one watching.  
+            No one collecting.  
+            No one mining your imagination.
+            <br><br>
+            Your universe exists offline — unreachable, unmonitored, untouchable.
+        </div>
+
+        <!-- SOVEREIGNTY -->
+        <div class="section">
+            Your universe becomes sovereign.  
+            You can carry it on a portable hard drive.  
+            You can back it up anywhere you want.  
+            You can open it anywhere, anytime, without permission from anyone.
+            <br><br>
+            Your universe is not a service.  
+            It is a possession.
+        </div>
+
+        <!-- NO FOOTPRINT -->
+        <div class="section">
+            And Altalune leaves no footprint behind.  
+            It doesn’t install itself.  
+            It doesn’t scatter files across a system.  
+            It doesn’t write hidden folders, registry entries, caches, or logs.  
+            It doesn’t cling to the machines you borrow.
+            <br><br>
+            Wherever you go — library, school, work, hotel, café, a friend’s laptop —  
+            Altalune runs entirely from your drive,  
+            and when you unplug it,  
+            <strong>nothing remains.</strong>
+            <br><br>
+            Your universe arrives with you.  
+            And it leaves with you.
+        </div>
+
+        <!-- ETERNAL -->
+        <div class="section">
+            Your universe becomes eternal.  
+            No subscription to maintain.  
+            No server to shut down.  
+            No company to trust.  
+            No expiration date.  
+            No dependency on the internet’s mood.
+            <br><br>
+            Your universe lives as long as you want it to.  
+            And no one can take it away.
+        </div>
+
+        <!-- CLOSING -->
+        <div class="section">
+            This is what A Universe in Your Pocket means.  
+            Your creativity, sovereign.  
+            Your worlds, portable.  
+            Your ideas, protected.  
+            Your universe — finally, truly — yours.
+        </div>
+
+        <a href="/" class="back">← back to Altalune</a>
+
+    </div>
+
+</body>
+</html>
