@@ -7,7 +7,6 @@
 
   <style>
     :root {
-      --bg-deep-blue: #050b1a;
       --metal-gold: #f4c46a;
       --text-gold: #f7d48a;
       --text-soft-gold: #f0e0b8;
@@ -51,20 +50,20 @@
       display: block;
     }
 
-    /* SECTION TITLES */
+    /* MAIN TAGLINE */
     .title {
       font-family: "Georgia", serif;
       font-size: 1.6rem;
       letter-spacing: 0.08em;
       color: var(--metal-gold);
-      margin-bottom: 1.25rem;
+      margin-bottom: 2.5rem;
       text-shadow:
         0 0 12px rgba(255, 200, 120, 0.45),
         0 0 28px rgba(255, 160, 60, 0.35),
         0 0 48px rgba(255, 140, 40, 0.25);
     }
 
-    /* CTA LINKS */
+    /* CTA LINKS (used on pillar titles) */
     .cta-link {
       color: var(--text-gold);
       cursor: pointer;
@@ -76,6 +75,7 @@
       text-shadow:
         0 0 6px rgba(255, 200, 120, 0.35),
         0 0 14px rgba(255, 180, 90, 0.25);
+      text-decoration: none;
     }
 
     .cta-link:hover {
@@ -87,17 +87,9 @@
       letter-spacing: 0.5px;
     }
 
-    .cta-row {
-      margin: 1.75rem 0 2.5rem;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-
     /* TEXT BLOCKS */
     .block {
-      margin-bottom: 3rem;
+      margin-bottom: 3.5rem;
       font-size: 1.15rem;
     }
 
@@ -105,11 +97,13 @@
       margin-bottom: 1.1rem;
     }
 
+    /* PILLAR TITLES (now clickable CTAs) */
     .pillar-title {
       font-family: "Georgia", serif;
       font-size: 1.35rem;
       color: var(--metal-gold);
       margin-bottom: 0.75rem;
+      display: inline-block;
       text-shadow:
         0 0 10px rgba(255, 200, 120, 0.45),
         0 0 24px rgba(255, 160, 60, 0.35);
@@ -143,30 +137,23 @@
         <p>It doesn’t have to be this way.</p>
       </div>
 
-      <!-- CTA LINKS -->
-      <div class="cta-row">
-        <a href="#your-words" class="cta-link">your words</a>
-        <a href="#your-world" class="cta-link">your world</a>
-        <a href="#universe-pocket" class="cta-link">a universe in your pocket</a>
-      </div>
-
       <!-- PILLAR 1 -->
       <div id="your-words" class="block">
-        <div class="pillar-title">your words</div>
+        <a href="#your-words" class="pillar-title cta-link">your words</a>
         <p>Altalune — with Eve — learns <em>you</em>. Your voice, your patterns, your instincts. Not to replace you, but to amplify you.</p>
         <p>A companion who grows with your writing and helps bring your ideas to life with intelligence rooted in <strong>your</strong> world, not the internet’s.</p>
       </div>
 
       <!-- PILLAR 2 -->
       <div id="your-world" class="block">
-        <div class="pillar-title">your world</div>
+        <a href="#your-world" class="pillar-title cta-link">your world</a>
         <p>Altalune is built as a constellation — a living structure where every panel speaks to every other.</p>
         <p>Characters connect to chapters. Lore connects to timelines. Rules connect to plot arcs. Your entire universe becomes one coherent, interconnected space.</p>
       </div>
 
       <!-- PILLAR 3 -->
       <div id="universe-pocket" class="block">
-        <div class="pillar-title">a universe in your pocket</div>
+        <a href="#universe-pocket" class="pillar-title cta-link">a universe in your pocket</a>
         <p>Altalune is portable, offline, and sovereign. No cloud. No subscriptions. No data mining.</p>
         <p>Your entire creative universe lives on your device or your drive — a world you can carry anywhere, open anywhere, and leave without a trace.</p>
       </div>
