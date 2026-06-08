@@ -7,10 +7,10 @@
 
     <style>
         :root {
-            --bronze: #c89b4b;
-            --bronze-deep: #a67c33;
-            --glow-outer: 0 0 22px rgba(200, 155, 75, 0.95);
-            --glow-inner: 0 0 8px rgba(200, 155, 75, 0.75);
+            --bronze: #f4b86a;          /* Updated text color */
+            --bronze-deep: #d89a4f;     /* Deeper shade for shadows */
+            --glow-outer: 0 0 22px rgba(244, 184, 106, 0.95);
+            --glow-inner: 0 0 8px rgba(244, 184, 106, 0.75);
         }
 
         body {
@@ -24,7 +24,6 @@
             overflow-x: hidden;
         }
 
-        /* DARKER COSMIC OVERLAY FOR MAXIMUM CONTRAST */
         .overlay {
             position: fixed;
             top: 0;
@@ -44,7 +43,6 @@
             padding: 80px 20px;
         }
 
-        /* HERO TAGLINE */
         .hero-title {
             font-size: 3.4rem;
             font-weight: 700;
@@ -62,28 +60,26 @@
             text-shadow: var(--glow-outer), var(--glow-inner);
         }
 
-        /* PAIN LINES */
+        /* PAIN LINES — tightened spacing */
         .pain-lines {
-            margin-bottom: 70px;
+            margin-bottom: 50px;
             font-size: 1.3rem;
-            line-height: 1.9;
+            line-height: 1.4;
             font-weight: 500;
         }
 
         .pain-lines div {
-            margin: 12px 0;
+            margin: 6px 0;
             color: var(--bronze);
             text-shadow: var(--glow-inner);
         }
 
-        /* LOGO */
         .logo {
             margin: 70px auto 90px;
             max-width: 440px;
-            filter: drop-shadow(0 0 18px rgba(200, 155, 75, 0.8));
+            filter: drop-shadow(0 0 18px rgba(244, 184, 106, 0.8));
         }
 
-        /* CTA PILLARS */
         .pillars {
             margin-top: 40px;
         }
@@ -91,7 +87,7 @@
         .pillar-title {
             display: block;
             font-size: 2rem;
-            margin: 30px 0;
+            margin: 30px 0 10px;
             text-decoration: none;
             color: var(--bronze);
             font-weight: 600;
@@ -103,35 +99,62 @@
             text-shadow: var(--glow-outer), var(--glow-inner);
             transform: scale(1.07);
         }
+
+        .pillar-text {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: var(--bronze);
+            text-shadow: var(--glow-inner);
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- DARK OVERLAY -->
     <div class="overlay"></div>
 
     <div class="container">
 
-        <!-- HERO TAGLINE -->
         <div class="hero-title">Your Words, Your World</div>
         <div class="hero-subtitle">A universe in your pocket</div>
 
-        <!-- PAIN LINES -->
         <div class="pain-lines">
             <div>Your creativity is mined, analyzed, and locked behind subscriptions.</div>
             <div>Your worlds are scattered across apps that don’t understand each other — or you.</div>
             <div>Your ideas live on someone else’s servers — and only when you're online.</div>
         </div>
 
-        <!-- LOGO -->
         <img src="assets/logo only.png" alt="Altalune Logo" class="logo">
 
-        <!-- CTA PILLARS -->
         <div class="pillars">
+
+            <!-- YOUR WORDS -->
             <a href="/your-words/" class="pillar-title">your words</a>
+            <div class="pillar-text">
+                with Eve — learns you. Your voice, your patterns, your instincts.  
+                Not to replace you, but to amplify you.  
+                who grows with your writing and helps bring your ideas to life —  
+                rooted in your world, not the internet’s.
+            </div>
+
+            <!-- YOUR WORLD -->
             <a href="/your-world/" class="pillar-title">your world</a>
+            <div class="pillar-text">
+                built as a constellation — a living structure where every panel connects to each other.  
+                chapters connect to lore. Lore connects to timelines.  
+                Rules connect to themes.  
+                The entire universe becomes one coherent, interconnected space.
+            </div>
+
+            <!-- A UNIVERSE IN YOUR POCKET -->
             <a href="/universe-in-your-pocket/" class="pillar-title">a universe in your pocket</a>
+            <div class="pillar-text">
+                your entire creative universe — always with you, always yours,  
+                always offline, always private.
+            </div>
+
         </div>
 
     </div>
