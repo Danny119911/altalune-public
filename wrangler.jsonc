@@ -1,28 +1,14 @@
 {
+  "$schema": "node_modules/wrangler/config-schema.json",
   "name": "altalune-public",
-  "type": "service",
-  "main": "src/index.js",
-  "compatibility_date": "2026-06-13",
-  
-  "env": {
-    "production": {
-      "routes": [
-        {
-          "pattern": "altalune.dev/*",
-          "zone_name": "altalune.dev"
-        }
-      ]
-    }
+  "compatibility_date": "2026-06-14",
+  "observability": {
+    "enabled": true
   },
-
-  "build": {
-    "command": "",
-    "cwd": "./",
-    "watch_paths": []
+  "assets": {
+    "directory": "."
   },
-
-  "site": {
-    "bucket": "./",
-    "include": ["*.html", "*.css", "*.js", "*.png", "*.jpg", "*.svg", "**/*.html", "**/*.css", "**/*.js", "**/*.png", "**/*.jpg", "**/*.svg"]
-  }
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
 }
