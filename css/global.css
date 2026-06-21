@@ -13,9 +13,10 @@ html, body {
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
 
-    /* FULL‑PAGE STARFIELD BACKGROUND */
+    /* FULL‑PAGE STARFIELD BACKGROUND + PARALLAX DRIFT */
     background: url('../assets/starfield.png') center/cover no-repeat fixed;
     background-color: #000; /* fallback */
+    animation: starfield-drift 120s linear infinite;
 }
 
 /* GLOBAL READABILITY OVERLAY ----------------------------------- */
@@ -27,6 +28,17 @@ body::before {
     background: rgba(0, 0, 0, 0.55); /* adjust 0.45–0.65 for brightness */
     pointer-events: none;
     z-index: 0;
+}
+
+/* STARFIELD DRIFT ANIMATION ------------------------------------ */
+
+@keyframes starfield-drift {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -800px 800px; /* slow diagonal drift */
+    }
 }
 
 /* RESPONSIVE TYPE SCALE ---------------------------------------- */
