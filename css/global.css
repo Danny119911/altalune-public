@@ -122,7 +122,8 @@ body::before {
 
 .gate-wrapper {
     position: relative;
-    width: min(40vw, 450px); /* 50% reduction */
+    width: 22vw;          /* small, elegant, viewport-based */
+    max-width: 260px;     /* prevents dominance */
     margin: 0 auto;
     margin-top: var(--space-5);
     transform-style: preserve-3d;
@@ -140,13 +141,13 @@ body::before {
 
 .logo {
     position: absolute;
-    top: -3vw; /* half the offset */
+    top: -1vw;
     left: 50%;
     transform: translateX(-50%);
-    width: 18%; /* half the width */
+    width: 10vw;          /* scales with screen */
+    max-width: 120px;     /* prevents huge scaling */
     z-index: 3;
 }
-
 
 /* FOG LAYER ----------------------------------------------------- */
 
@@ -164,7 +165,7 @@ body::before {
 
 .cta-stack {
     position: absolute;
-    bottom: 8vw; /* adjust for perfect placement */
+    bottom: 2vw; /* adjusted for smaller gate */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
