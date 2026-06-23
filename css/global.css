@@ -18,13 +18,14 @@ html, body {
     animation: starfield-drift 120s linear infinite;
 }
 
+/* DARK OVERLAY — NOW BEHIND ALL CONTENT ---------------------- */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.55);
     pointer-events: none;
-    z-index: 0;
+    z-index: -1; /* FIXED — moved behind everything */
 }
 
 @keyframes starfield-drift {
