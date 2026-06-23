@@ -122,7 +122,7 @@ body::before {
 
 .gate-wrapper {
     position: relative;
-    width: min(80vw, 900px); /* bigger gate */
+    width: min(40vw, 450px); /* 50% reduction */
     margin: 0 auto;
     margin-top: var(--space-5);
     transform-style: preserve-3d;
@@ -140,12 +140,13 @@ body::before {
 
 .logo {
     position: absolute;
-    top: -6vw; /* adjust as needed */
+    top: -3vw; /* half the offset */
     left: 50%;
     transform: translateX(-50%);
-    width: 35%; /* scales with gate */
+    width: 18%; /* half the width */
     z-index: 3;
 }
+
 
 /* FOG LAYER ----------------------------------------------------- */
 
