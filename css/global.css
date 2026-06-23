@@ -32,7 +32,7 @@ body::before {
     100% { background-position: -800px 800px; }
 }
 
-/* GLOBAL TYPE + SPACING SCALE (COMPRESSED FOR ONE SCREEN) ------ */
+/* GLOBAL TYPE + SPACING SCALE -------------------------------- */
 
 :root {
     --step--2: clamp(0.55rem, 0.45rem + 0.2vw, 0.75rem);
@@ -50,7 +50,7 @@ body::before {
     --space-5: clamp(1.8rem, 1.4rem + 1vw, 3rem);
 }
 
-/* HERO LAYOUT --------------------------------------------------- */
+/* HERO LAYOUT ------------------------------------------------- */
 
 #hero {
     width: 100%;
@@ -60,13 +60,11 @@ body::before {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    /* CRITICAL: reduce top/bottom padding */
     padding-top: var(--space-4);
     padding-bottom: var(--space-4);
 }
 
-/* PAGE 1 IDENTITY BLOCK ---------------------------------------- */
+/* PAGE 1 IDENTITY BLOCK -------------------------------------- */
 
 .identity-block {
     text-align: center;
@@ -94,15 +92,15 @@ body::before {
     margin-bottom: var(--space-2);
 }
 
-/* PAIN SECTION -------------------------------------------------- */
+/* PAIN SECTION ------------------------------------------------ */
 
 .pain-section {
-    max-width: 620px; /* smaller */
+    max-width: 620px;
     margin: 0 auto var(--space-4);
     padding: 0 var(--space-2);
     text-align: center;
     font-size: var(--step-0);
-    line-height: 1.45; /* tighter */
+    line-height: 1.45;
     opacity: 0.92;
     color: #d9a86c;
 }
@@ -111,15 +109,28 @@ body::before {
     margin-bottom: var(--space-2);
 }
 
-/* GATE POSITIONING (REDUCED) ----------------------------------- */
+/* ------------------------------------------------------------- */
+/* GATE SECTION — FULL REWRITE                                   */
+/* ------------------------------------------------------------- */
+
+#gate-section {
+    height: 100vh;                 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
 
 .gate-wrapper {
     position: relative;
-    width: 16vw;          /* smaller */
-    max-width: 200px;     /* smaller */
-    margin: 0 auto;
-    margin-top: var(--space-4);
+    width: 12vw;                   
+    max-width: 160px;              
     transform-style: preserve-3d;
+
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 .gate {
@@ -130,46 +141,16 @@ body::before {
     z-index: 1;
 }
 
-/* LOGO ABOVE THE GATE (REDUCED) -------------------------------- */
-
 .logo {
     position: absolute;
-    top: -0.6vw;
+    top: -1.2vw;
     left: 50%;
     transform: translateX(-50%);
-    width: 7vw;           /* smaller */
-    max-width: 85px;      /* smaller */
+    width: 5vw;
+    max-width: 65px;
+    height: auto;
     z-index: 3;
 }
-
-/* CTA STACK (REDUCED) ------------------------------------------ */
-
-.cta-stack {
-    position: absolute;
-    bottom: 1vw; /* reduced */
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-1);
-    z-index: 3;
-    text-align: center;
-}
-
-.cta {
-    font-size: var(--step-1);
-    color: #fff;
-    text-decoration: none;
-    opacity: 0.85;
-    transition: opacity 0.35s ease, transform 0.35s ease;
-}
-
-.cta:hover {
-    opacity: 1;
-    transform: scale(1.08);
-}
-
-/* HOVER EFFECTS ------------------------------------------------- */
 
 .gate-wrapper:hover .fog-layer {
     opacity: 0.35;
@@ -178,6 +159,6 @@ body::before {
 }
 
 .gate-wrapper:hover {
-    transform: translateZ(25px) scale(1.015);
+    transform: translateY(0) translateZ(25px) scale(1.015);
     transition: transform 0.4s ease;
 }
