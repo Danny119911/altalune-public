@@ -110,24 +110,18 @@ body::before {
 }
 
 /* ------------------------------------------------------------- */
-/* GATE SECTION — FULL REWRITE                                   */
+/* GATE + LOGO SECTION — MATCHES YOUR CURRENT HTML               */
 /* ------------------------------------------------------------- */
-
-#gate-section {
-    height: 100vh;                 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-}
 
 .gate-wrapper {
     position: relative;
-    width: 12vw;                   
-    max-width: 160px;              
+    width: 12vw;
+    max-width: 160px;
+    margin: 0 auto;
+    margin-top: var(--space-5);
     transform-style: preserve-3d;
 
+    /* hidden on load */
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 0.8s ease, transform 0.8s ease;
@@ -152,6 +146,7 @@ body::before {
     z-index: 3;
 }
 
+/* Hover effects */
 .gate-wrapper:hover .fog-layer {
     opacity: 0.35;
     filter: blur(6px);
