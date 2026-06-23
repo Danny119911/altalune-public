@@ -13,13 +13,10 @@ html, body {
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
 
-    /* FULL‑PAGE STARFIELD BACKGROUND + PARALLAX DRIFT */
     background: url('../assets/starfield.png') center/cover no-repeat fixed;
     background-color: #000;
     animation: starfield-drift 120s linear infinite;
 }
-
-/* GLOBAL READABILITY OVERLAY ----------------------------------- */
 
 body::before {
     content: "";
@@ -30,33 +27,27 @@ body::before {
     z-index: 0;
 }
 
-/* STARFIELD DRIFT ANIMATION ------------------------------------ */
-
 @keyframes starfield-drift {
     0% { background-position: 0 0; }
     100% { background-position: -800px 800px; }
 }
 
-/* RESPONSIVE TYPE SCALE ---------------------------------------- */
+/* GLOBAL TYPE + SPACING SCALE (REDUCED) ------------------------ */
 
 :root {
-    --step--2: clamp(0.75rem, 0.7rem + 0.2vw, 0.9rem);
-    --step--1: clamp(0.9rem, 0.85rem + 0.3vw, 1.05rem);
-    --step-0: clamp(1rem, 0.95rem + 0.4vw, 1.25rem);
-    --step-1: clamp(1.25rem, 1.1rem + 0.8vw, 1.75rem);
-    --step-2: clamp(1.75rem, 1.5rem + 1.2vw, 2.5rem);
-    --step-3: clamp(2.5rem, 2rem + 2vw, 3.5rem);
-    --step-4: clamp(3.5rem, 3rem + 3vw, 5rem);
-}
+    --step--2: clamp(0.6rem, 0.5rem + 0.2vw, 0.8rem);
+    --step--1: clamp(0.75rem, 0.7rem + 0.3vw, 0.95rem);
+    --step-0: clamp(0.9rem, 0.85rem + 0.4vw, 1.1rem);
+    --step-1: clamp(1.1rem, 1rem + 0.6vw, 1.4rem);
+    --step-2: clamp(1.4rem, 1.2rem + 0.8vw, 1.9rem);
+    --step-3: clamp(1.9rem, 1.6rem + 1.2vw, 2.7rem);
+    --step-4: clamp(2.7rem, 2.2rem + 1.8vw, 3.8rem);
 
-/* SPACING SYSTEM ------------------------------------------------ */
-
-:root {
-    --space-1: clamp(0.5rem, 0.4rem + 0.4vw, 1rem);
-    --space-2: clamp(1rem, 0.8rem + 0.6vw, 1.5rem);
-    --space-3: clamp(1.5rem, 1.2rem + 1vw, 2.5rem);
-    --space-4: clamp(2rem, 1.5rem + 2vw, 4rem);
-    --space-5: clamp(3rem, 2rem + 3vw, 6rem);
+    --space-1: clamp(0.3rem, 0.25rem + 0.3vw, 0.7rem);
+    --space-2: clamp(0.6rem, 0.5rem + 0.4vw, 1rem);
+    --space-3: clamp(1rem, 0.8rem + 0.6vw, 1.8rem);
+    --space-4: clamp(1.5rem, 1.2rem + 1vw, 3rem);
+    --space-5: clamp(2rem, 1.5rem + 1.5vw, 4rem);
 }
 
 /* HERO LAYOUT --------------------------------------------------- */
@@ -104,12 +95,12 @@ body::before {
 /* PAIN SECTION -------------------------------------------------- */
 
 .pain-section {
-    max-width: 780px;
+    max-width: 680px; /* reduced */
     margin: 0 auto var(--space-5);
     padding: 0 var(--space-2);
     text-align: center;
     font-size: var(--step-0);
-    line-height: 1.7;
+    line-height: 1.6;
     opacity: 0.92;
     color: #d9a86c;
 }
@@ -118,12 +109,12 @@ body::before {
     margin-bottom: var(--space-3);
 }
 
-/* GATE POSITIONING --------------------------------------------- */
+/* GATE POSITIONING (REDUCED) ----------------------------------- */
 
 .gate-wrapper {
     position: relative;
-    width: 22vw;          /* small, elegant, viewport-based */
-    max-width: 260px;     /* prevents dominance */
+    width: 18vw;          /* smaller */
+    max-width: 220px;     /* smaller */
     margin: 0 auto;
     margin-top: var(--space-5);
     transform-style: preserve-3d;
@@ -137,15 +128,15 @@ body::before {
     z-index: 1;
 }
 
-/* LOGO ABOVE THE GATE ------------------------------------------ */
+/* LOGO ABOVE THE GATE (REDUCED) -------------------------------- */
 
 .logo {
     position: absolute;
-    top: -1vw;
+    top: -0.8vw;
     left: 50%;
     transform: translateX(-50%);
-    width: 10vw;          /* scales with screen */
-    max-width: 120px;     /* prevents huge scaling */
+    width: 8vw;           /* smaller */
+    max-width: 100px;     /* smaller */
     z-index: 3;
 }
 
@@ -161,11 +152,11 @@ body::before {
     pointer-events: none;
 }
 
-/* CTA STACK INSIDE THE GATE ------------------------------------ */
+/* CTA STACK (REDUCED) ------------------------------------------ */
 
 .cta-stack {
     position: absolute;
-    bottom: 2vw; /* adjusted for smaller gate */
+    bottom: 1.5vw; /* reduced */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -188,15 +179,13 @@ body::before {
     transform: scale(1.08);
 }
 
-/* FOG REACTION ON HOVER ---------------------------------------- */
+/* HOVER EFFECTS ------------------------------------------------- */
 
 .gate-wrapper:hover .fog-layer {
     opacity: 0.35;
     filter: blur(6px);
     transition: opacity 0.4s ease, filter 0.4s ease;
 }
-
-/* GATE DEPTH MOTION -------------------------------------------- */
 
 .gate-wrapper:hover {
     transform: translateZ(25px) scale(1.015);
