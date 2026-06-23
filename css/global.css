@@ -15,7 +15,7 @@ html, body {
 
     /* FULL‑PAGE STARFIELD BACKGROUND + PARALLAX DRIFT */
     background: url('../assets/starfield.png') center/cover no-repeat fixed;
-    background-color: #000; /* fallback */
+    background-color: #000;
     animation: starfield-drift 120s linear infinite;
 }
 
@@ -25,7 +25,7 @@ body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.55); /* adjust 0.45–0.65 for brightness */
+    background: rgba(0, 0, 0, 0.55);
     pointer-events: none;
     z-index: 0;
 }
@@ -33,12 +33,8 @@ body::before {
 /* STARFIELD DRIFT ANIMATION ------------------------------------ */
 
 @keyframes starfield-drift {
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: -800px 800px; /* slow diagonal drift */
-    }
+    0% { background-position: 0 0; }
+    100% { background-position: -800px 800px; }
 }
 
 /* RESPONSIVE TYPE SCALE ---------------------------------------- */
@@ -69,7 +65,7 @@ body::before {
     width: 100%;
     min-height: 100vh;
     position: relative;
-    z-index: 1; /* ensures content sits above overlay */
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,55 +80,51 @@ body::before {
     margin-bottom: var(--space-4);
 }
 
-/* Top line: Altalune */
 .brand-name {
     font-size: var(--step-4);
     font-weight: 700;
-    color: #d9a86c; /* bronze-gold */
+    color: #d9a86c;
     margin-bottom: var(--space-1);
 }
 
-/* Middle line: triad */
 .brand-triad {
     font-size: var(--step-2);
     font-weight: 500;
-    color: #d9a86c; /* bronze-gold */
+    color: #d9a86c;
     margin-bottom: var(--space-1);
 }
 
-/* Bottom line: promise */
 .brand-promise {
     font-size: var(--step-1);
     font-weight: 400;
-    color: #d9a86c; /* bronze-gold */
+    color: #d9a86c;
     margin-bottom: var(--space-3);
 }
 
-/* PAIN SECTION — CINEMATIC SPACING & READABILITY ---------------- */
+/* PAIN SECTION -------------------------------------------------- */
 
 .pain-section {
     max-width: 780px;
-    margin: 0 auto;
-    margin-bottom: var(--space-5);
+    margin: 0 auto var(--space-5);
     padding: 0 var(--space-2);
     text-align: center;
     font-size: var(--step-0);
     line-height: 1.7;
     opacity: 0.92;
-    color: #d9a86c; /* Altalune copper/gold */
+    color: #d9a86c;
 }
 
 .pain-section p {
     margin-bottom: var(--space-3);
 }
 
-/* GATE POSITIONING ------------------------------------------------ */
+/* GATE POSITIONING --------------------------------------------- */
 
 .gate-wrapper {
     position: relative;
-    width: min(90vw, 600px);
+    width: min(80vw, 900px); /* bigger gate */
     margin: 0 auto;
-    margin-top: var(--space-4);
+    margin-top: var(--space-5);
     transform-style: preserve-3d;
 }
 
@@ -144,7 +136,18 @@ body::before {
     z-index: 1;
 }
 
-/* FOG LAYER ------------------------------------------------------- */
+/* LOGO ABOVE THE GATE ------------------------------------------ */
+
+.logo {
+    position: absolute;
+    top: -6vw; /* adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35%; /* scales with gate */
+    z-index: 3;
+}
+
+/* FOG LAYER ----------------------------------------------------- */
 
 .fog-layer {
     position: absolute;
@@ -156,13 +159,13 @@ body::before {
     pointer-events: none;
 }
 
-/* CTA STACK INSIDE THE GATE -------------------------------------- */
+/* CTA STACK INSIDE THE GATE ------------------------------------ */
 
 .cta-stack {
     position: absolute;
-    top: 50%;
+    bottom: 8vw; /* adjust for perfect placement */
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     gap: var(--space-2);
@@ -183,7 +186,7 @@ body::before {
     transform: scale(1.08);
 }
 
-/* FOG REACTION ON HOVER ----------------------------------------- */
+/* FOG REACTION ON HOVER ---------------------------------------- */
 
 .gate-wrapper:hover .fog-layer {
     opacity: 0.35;
@@ -191,7 +194,7 @@ body::before {
     transition: opacity 0.4s ease, filter 0.4s ease;
 }
 
-/* GATE DEPTH MOTION --------------------------------------------- */
+/* GATE DEPTH MOTION -------------------------------------------- */
 
 .gate-wrapper:hover {
     transform: translateZ(25px) scale(1.015);
