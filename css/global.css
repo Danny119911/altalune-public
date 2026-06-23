@@ -50,7 +50,7 @@ body::before {
     --space-5: clamp(1.8rem, 1.4rem + 1vw, 3rem);
 }
 
-/* HERO LAYOUT ------------------------------------------------- */
+/* PAGE 1 — HERO SECTION -------------------------------------- */
 
 #hero {
     width: 100%;
@@ -64,7 +64,7 @@ body::before {
     padding-bottom: var(--space-4);
 }
 
-/* PAGE 1 IDENTITY BLOCK -------------------------------------- */
+/* IDENTITY BLOCK --------------------------------------------- */
 
 .identity-block {
     text-align: center;
@@ -109,23 +109,42 @@ body::before {
     margin-bottom: var(--space-2);
 }
 
-/* ------------------------------------------------------------- */
-/* GATE + LOGO SECTION — MATCHES YOUR CURRENT HTML               */
-/* ------------------------------------------------------------- */
+/* PAGE 2 — FULLSCREEN GATE SECTION --------------------------- */
+
+#gate-section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: var(--space-4);
+    padding-bottom: var(--space-4);
+}
+
+/* GATE WRAPPER (hidden until scroll) ------------------------- */
 
 .gate-wrapper {
     position: relative;
     width: 12vw;
     max-width: 160px;
-    margin: 0 auto;
-    margin-top: var(--space-5);
     transform-style: preserve-3d;
 
-    /* hidden on load */
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
+
+/* When user scrolls, JS adds .scrolled to <body> */
+body.scrolled .gate-wrapper {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* GATE + LOGO ------------------------------------------------ */
 
 .gate {
     width: 100%;
@@ -135,7 +154,7 @@ body::before {
     z-index: 1;
 }
 
-.logo {
+.gate-logo {
     position: absolute;
     top: -1.2vw;
     left: 50%;
@@ -146,14 +165,51 @@ body::before {
     z-index: 3;
 }
 
-/* Hover effects */
+/* FOG LAYER -------------------------------------------------- */
+
+.fog-layer {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.6) 70%);
+    filter: blur(4px);
+    opacity: 0.25;
+    z-index: 2;
+    transition: opacity 0.4s ease, filter 0.4s ease;
+}
+
+/* CTA STACK -------------------------------------------------- */
+
+.cta-stack {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.cta {
+    color: #d9a86c;
+    text-decoration: none;
+    font-size: var(--step-1);
+    font-weight: 500;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.cta:hover {
+    color: #fff;
+}
+
+/* Hover effects --------------------------------------------- */
+
 .gate-wrapper:hover .fog-layer {
     opacity: 0.35;
     filter: blur(6px);
-    transition: opacity 0.4s ease, filter 0.4s ease;
 }
 
 .gate-wrapper:hover {
     transform: translateY(0) translateZ(25px) scale(1.015);
-    transition: transform 0.4s ease;
 }
