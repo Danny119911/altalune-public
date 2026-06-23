@@ -13,41 +13,8 @@ html, body {
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
 
-    /* FIXED BACKGROUND — NEVER MOVES */
     background: url('../assets/starfield.png') center/cover no-repeat fixed;
     background-color: #000;
-}
-
-/* STARFIELD ANIMATION LAYER — MOVES INDEPENDENTLY ------------- */
-
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: -2;
-
-    background: url('../assets/starfield.png') center/cover no-repeat;
-    opacity: 0.35;
-
-    animation: starfield-drift 120s linear infinite;
-}
-
-/* DARK OVERLAY LAYER ------------------------------------------ */
-
-body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.35); /* LIGHTER so gate is visible */
-    pointer-events: none;
-    z-index: -1;
-}
-
-/* STARFIELD DRIFT KEYFRAMES ---------------------------------- */
-
-@keyframes starfield-drift {
-    0% { background-position: 0 0; }
-    100% { background-position: -800px 800px; }
 }
 
 /* GLOBAL TYPE + SPACING SCALE -------------------------------- */
@@ -135,7 +102,7 @@ body::after {
     width: 100%;
     height: 100vh;
     position: relative;
-    z-index: 9999; /* FIX: bring gate above overlays */
+    z-index: 2;
 
     display: flex;
     justify-content: center;
@@ -143,6 +110,8 @@ body::after {
 
     padding-top: var(--space-4);
     padding-bottom: var(--space-4);
+    /* debug: */
+    /* outline: 1px solid red; */
 }
 
 /* GATE WRAPPER (hidden until scroll) ------------------------- */
@@ -157,7 +126,7 @@ body::after {
     transform: translateY(40px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 
-    z-index: 10000; /* FIX: ensure visibility */
+    z-index: 3;
 }
 
 body.scrolled .gate-wrapper {
@@ -193,7 +162,7 @@ body.scrolled .gate-wrapper {
     inset: 0;
     background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.6) 70%);
     filter: blur(4px);
-    opacity: 0.15; /* FIX: lighter so gate is visible */
+    opacity: 0.2;
     z-index: 2;
     transition: opacity 0.4s ease, filter 0.4s ease;
 }
