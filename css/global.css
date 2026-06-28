@@ -101,37 +101,38 @@ html, body {
 #gate-section {
     width: 100%;
     height: 100vh;
+    min-height: 100vh;
     position: relative;
     z-index: 2;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
     padding-top: var(--space-4);
     padding-bottom: var(--space-4);
-    /* debug: */
-    /* outline: 1px solid red; */
 }
 
-/* GATE WRAPPER (hidden until scroll) ------------------------- */
+/* FINAL AGGRESSIVE HERO SCALE ------------------------------- */
 
 .gate-wrapper {
     position: relative;
-    width: 12vw;
-    max-width: 160px;
+    width: min(98vw, 1700px);
+    max-width: 1700px;
+    min-width: 700px;
     transform-style: preserve-3d;
 
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    opacity: 1;
+    transform: none;
+    transition: transform 0.8s ease;
 
     z-index: 3;
 }
 
 body.scrolled .gate-wrapper {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
 }
 
 /* GATE + LOGO ------------------------------------------------ */
@@ -146,13 +147,12 @@ body.scrolled .gate-wrapper {
 
 .gate-logo {
     position: absolute;
-    top: -1.2vw;
+    top: -10.5%;
     left: 50%;
     transform: translateX(-50%);
-    width: 5vw;
-    max-width: 65px;
+    width: clamp(240px, 20vw, 420px);
     height: auto;
-    z-index: 3;
+    z-index: 5;
 }
 
 /* FOG LAYER -------------------------------------------------- */
@@ -171,22 +171,26 @@ body.scrolled .gate-wrapper {
 
 .cta-stack {
     position: absolute;
-    bottom: 8%;
+    top: 56%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
+    width: 62%;
     z-index: 4;
 
     display: flex;
     flex-direction: column;
-    gap: var(--space-2);
+    align-items: center;
+    gap: clamp(14px, 1.2vw, 28px);
 }
 
 .cta {
     color: #d9a86c;
     text-decoration: none;
-    font-size: var(--step-1);
-    font-weight: 500;
+    font-size: clamp(3.2rem, 5.1vw, 6.2rem);
+    line-height: 0.92;
+    font-weight: 700;
     text-align: center;
+    text-shadow: 0 0 12px rgba(0,0,0,0.82);
     transition: color 0.3s ease;
 }
 
@@ -202,5 +206,53 @@ body.scrolled .gate-wrapper {
 }
 
 .gate-wrapper:hover {
-    transform: translateY(0) translateZ(25px) scale(1.015);
+    transform: scale(1.01);
+}
+
+/* Tablet / small desktop ------------------------------------ */
+
+@media (max-width: 1200px) {
+    .gate-wrapper {
+        width: 99vw;
+        min-width: 0;
+    }
+
+    .gate-logo {
+        top: -9.5%;
+        width: clamp(170px, 24vw, 300px);
+    }
+
+    .cta-stack {
+        top: 55%;
+        width: 68%;
+    }
+
+    .cta {
+        font-size: clamp(2.4rem, 6.2vw, 4.4rem);
+        line-height: 0.95;
+    }
+}
+
+/* Mobile ----------------------------------------------------- */
+
+@media (max-width: 700px) {
+    .gate-wrapper {
+        width: 100vw;
+    }
+
+    .gate-logo {
+        top: -8.5%;
+        width: clamp(120px, 30vw, 190px);
+    }
+
+    .cta-stack {
+        top: 54%;
+        width: 76%;
+        gap: 10px;
+    }
+
+    .cta {
+        font-size: clamp(1.8rem, 9vw, 3rem);
+        line-height: 1;
+    }
 }
