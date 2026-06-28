@@ -108,7 +108,7 @@ html, body {
     justify-content: center;
     align-items: flex-end;
     overflow: hidden;
-    padding: 0 0 var(--space-4);
+    padding: 0;
 }
 
 /* BALANCED HERO SCALE PASS ----------------------------------- */
@@ -142,12 +142,13 @@ body.scrolled .gate-wrapper {
 
 .gate-logo {
     position: absolute;
-    top: -6%;
+    top: -2%;
     left: 50%;
     transform: translateX(-50%);
-    width: clamp(78px, 8vw, 130px);
+    width: clamp(92px, 9vw, 150px);
     height: auto;
     z-index: 5;
+    filter: drop-shadow(0 0 10px rgba(217, 168, 108, 0.45));
 }
 
 /* FOG LAYER -------------------------------------------------- */
@@ -214,8 +215,8 @@ body.scrolled .gate-wrapper {
     }
 
     .gate-logo {
-        width: clamp(70px, 13vw, 110px);
-        top: -5%;
+        width: clamp(78px, 12vw, 124px);
+        top: -2%;
     }
 
     .cta-stack {
@@ -245,7 +246,7 @@ body.scrolled .gate-wrapper {
 
     .gate-logo {
         width: clamp(54px, 16vw, 80px);
-        top: -2%;
+        top: -1%;
     }
 
     .cta-stack {
