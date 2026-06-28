@@ -106,18 +106,18 @@ html, body {
     z-index: 2;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     overflow: hidden;
-    padding: 0;
+    padding: 0 0 var(--space-4);
 }
 
 /* BALANCED HERO SCALE PASS ----------------------------------- */
 
 .gate-wrapper {
     position: relative;
-    width: clamp(320px, 36vw, 620px);
-    max-width: 620px;
-    min-width: 320px;
+    width: clamp(160px, 18vw, 310px);
+    max-width: 310px;
+    min-width: 160px;
     transform-style: preserve-3d;
     opacity: 1;
     transform: none;
@@ -142,7 +142,7 @@ body.scrolled .gate-wrapper {
 
 .gate-logo {
     position: absolute;
-    top: -11%;
+    top: -6%;
     left: 50%;
     transform: translateX(-50%);
     width: clamp(78px, 8vw, 130px);
@@ -209,13 +209,13 @@ body.scrolled .gate-wrapper {
 
 @media (max-width: 900px) {
     .gate-wrapper {
-        width: clamp(290px, 58vw, 500px);
-        min-width: 290px;
+        width: clamp(145px, 29vw, 250px);
+        min-width: 145px;
     }
 
     .gate-logo {
         width: clamp(70px, 13vw, 110px);
-        top: -10%;
+        top: -5%;
     }
 
     .cta-stack {
@@ -233,19 +233,24 @@ body.scrolled .gate-wrapper {
 /* Mobile ----------------------------------------------------- */
 
 @media (max-width: 600px) {
+    #gate-section {
+        padding: 0 0 max(8px, env(safe-area-inset-bottom));
+    }
+
     .gate-wrapper {
-        width: 82vw;
+        width: 36vw;
+        max-width: 220px;
         min-width: 0;
     }
 
     .gate-logo {
-        width: clamp(62px, 20vw, 96px);
-        top: -9%;
+        width: clamp(54px, 16vw, 80px);
+        top: -2%;
     }
 
     .cta-stack {
         width: 78%;
-        top: 55%;
+        top: 58%;
         gap: clamp(12px, 4vw, 20px);
     }
 
