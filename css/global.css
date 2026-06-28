@@ -111,13 +111,13 @@ html, body {
     padding: 0;
 }
 
-/* BALANCED HERO SCALE (rollback from aggressive) ------------ */
+/* BALANCED HERO SCALE PASS ----------------------------------- */
 
 .gate-wrapper {
     position: relative;
-    width: clamp(360px, 44vw, 760px);
-    max-width: 760px;
-    min-width: 360px;
+    width: clamp(320px, 36vw, 620px);
+    max-width: 620px;
+    min-width: 320px;
     transform-style: preserve-3d;
     opacity: 1;
     transform: none;
@@ -145,7 +145,7 @@ body.scrolled .gate-wrapper {
     top: -11%;
     left: 50%;
     transform: translateX(-50%);
-    width: clamp(90px, 9vw, 155px);
+    width: clamp(78px, 8vw, 130px);
     height: auto;
     z-index: 5;
 }
@@ -166,23 +166,25 @@ body.scrolled .gate-wrapper {
 
 .cta-stack {
     position: absolute;
-    top: 56%;
+    top: 57%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 66%;
+    width: 68%;
     z-index: 4;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: clamp(8px, 0.9vw, 14px);
+    gap: clamp(18px, 2.2vw, 34px);
 }
 
 .cta {
     color: #d9a86c;
     text-decoration: none;
-    font-size: clamp(1.6rem, 2.4vw, 2.8rem);
-    line-height: 1.02;
+    font-size: clamp(1.15rem, 1.8vw, 2rem);
+    line-height: 1.18;
     font-weight: 700;
+    letter-spacing: 0.01em;
     text-align: center;
     text-shadow: 0 0 10px rgba(0,0,0,0.75);
     transition: color 0.25s ease;
@@ -207,22 +209,24 @@ body.scrolled .gate-wrapper {
 
 @media (max-width: 900px) {
     .gate-wrapper {
-        width: clamp(320px, 66vw, 560px);
-        min-width: 320px;
+        width: clamp(290px, 58vw, 500px);
+        min-width: 290px;
     }
 
     .gate-logo {
-        width: clamp(80px, 15vw, 130px);
+        width: clamp(70px, 13vw, 110px);
         top: -10%;
     }
 
     .cta-stack {
-        width: 72%;
-        top: 55%;
+        width: 74%;
+        top: 56%;
+        gap: clamp(14px, 3vw, 24px);
     }
 
     .cta {
-        font-size: clamp(1.35rem, 4.8vw, 2.2rem);
+        font-size: clamp(1rem, 4.2vw, 1.6rem);
+        line-height: 1.2;
     }
 }
 
@@ -230,22 +234,23 @@ body.scrolled .gate-wrapper {
 
 @media (max-width: 600px) {
     .gate-wrapper {
-        width: 84vw;
+        width: 82vw;
         min-width: 0;
     }
 
     .gate-logo {
-        width: clamp(72px, 22vw, 110px);
+        width: clamp(62px, 20vw, 96px);
         top: -9%;
     }
 
     .cta-stack {
-        width: 76%;
-        top: 54%;
+        width: 78%;
+        top: 55%;
+        gap: clamp(12px, 4vw, 20px);
     }
 
     .cta {
-        font-size: clamp(1.2rem, 6.8vw, 1.9rem);
-        line-height: 1.05;
+        font-size: clamp(0.95rem, 6vw, 1.45rem);
+        line-height: 1.22;
     }
 }
