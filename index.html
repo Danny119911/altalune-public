@@ -3,64 +3,570 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Altalune</title>
+    <title>Altalune — Your Words, Your Worlds, A Universe in Your Pocket</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Altalune is the first offline, unified writing environment. Organize your book, world lore, timelines, characters, and contextual local AI (Eve) in a single sovereign workspace.">
+    <meta name="keywords" content="writing app, worldbuilding, novel planner, offline writing software, local AI for writers, novelist environment, portable writing app">
+    
+    <!-- Stylesheet Link -->
     <link rel="stylesheet" href="css/global.css">
+    
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
 <body>
 
-    <!-- PAGE 1 — IDENTITY + PAIN -->
+    <!-- STICKY HEADER NAVIGATION -->
+    <header class="header-nav" id="main-nav">
+        <a href="#" class="nav-brand">
+            <img src="assets/altalue logo.png" alt="Altalune Logo" class="nav-brand-logo">
+            <h1 class="nav-brand-name">Altalune</h1>
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#pain">The Fog</a></li>
+                <li><a href="#unified">The Workspace</a></li>
+                <li><a href="#words">Words</a></li>
+                <li><a href="#world">World</a></li>
+                <li><a href="#pocket">Pocket</a></li>
+            </ul>
+        </nav>
+        <a href="#updates" class="nav-cta">Join Waitlist</a>
+    </header>
+
+    <!-- HERO SECTION — STARFIELD + PORTAL PARALLAX -->
     <section id="hero">
-
-        <!-- IDENTITY BLOCK -->
-        <div class="identity-block">
-            <h1 class="brand-name">Altalune</h1>
-            <h2 class="brand-triad">your words, your worlds, a universe in your pocket</h2>
-            <h3 class="brand-promise">where your imagination is freed.</h3>
+        <div class="hero-glow-bg"></div>
+        
+        <div class="portal-container">
+            <div class="gate-wrapper">
+                <img src="assets/arch finial.png" alt="Portal Arch" class="gate">
+                <div class="fog-layer"></div>
+                <img src="assets/altalue logo.png" alt="Altalune Inner Logo" class="gate-logo">
+            </div>
         </div>
 
-        <!-- PAIN SECTION -->
-        <div class="pain-section">
-            <p>
-                With today’s technology, writing should be easier — but online platforms bury your work behind a digital fog of subscriptions, scattered tools, and systems that pull your attention away from creation itself.
-            </p>
-            <p>
-                Drafts spread across apps. Notes vanish into cloud silos. AI reshapes your voice instead of understanding it. Everything feels fragmented, cluttered, and harder to hold together.
-            </p>
-            <p>
-                Your imagination is the gate to your ideas — but reaching it means pushing through the fog created by the very platforms meant to support you.
-            </p>
+        <div class="scroll-indicator">
+            <span>Scroll to enter</span>
+            <div class="scroll-mouse"></div>
         </div>
-
     </section>
 
+    <!-- PAIN SECTION — THE FOG OF MODERN WRITING -->
+    <section id="pain">
+        <div class="section-header">
+            <span class="section-label">The Obstacle</span>
+            <h2 class="section-title">The Fog of Modern Writing</h2>
+            <p class="section-subtitle">Reaching your ideas shouldn’t mean pushing through the clutter of platforms designed to harvest your creativity.</p>
+        </div>
 
-    <!-- PAGE 2 — GATE + LOGO + FOG + CTA -->
-    <section id="gate-section">
+        <div class="pain-grid">
+            <div class="pain-card">
+                <div class="pain-icon">⚔️</div>
+                <h3 class="pain-card-title">Scattered Workflows</h3>
+                <p class="pain-card-desc">Writers juggle 5–7 separate tools for their book manuscript, character notes, world-building wiki, timelines, and chatbot assistants. Creation gets lost in translation.</p>
+            </div>
+            
+            <div class="pain-card">
+                <div class="pain-icon">☁️</div>
+                <h3 class="pain-card-title">Subscription Silos</h3>
+                <p class="pain-card-desc">Your stories are stored on servers you don't control, buried behind sign-ins, internet requirements, and recurring fees. If their servers go dark, your worlds go dark.</p>
+            </div>
 
-        <!-- LOGO NEAR TOP OF VIEWPORT -->
-        <img src="assets/altalue logo.png" alt="Altalune Logo" class="gate-logo">
+            <div class="pain-card">
+                <div class="pain-icon">👁️</div>
+                <h3 class="pain-card-title">Creative Harvesting</h3>
+                <p class="pain-card-desc">Online AI platforms scan your manuscripts and train models on your private drafts, turning your original voice, characters, and ideas into corporate data assets.</p>
+            </div>
+        </div>
+    </section>
 
-        <div class="gate-wrapper">
+    <!-- UNIFIED SECTION — THE WORKSPACE MOCKUP -->
+    <section id="unified">
+        <div class="section-header">
+            <span class="section-label">The Solution</span>
+            <h2 class="section-title">One Space. Absolute Flow.</h2>
+            <p class="section-subtitle">Altalune is the first environment that unifies your book, world notes, timelines, and AI in a single offline screen—keeping you in the zone.</p>
+        </div>
 
-            <!-- GATE IMAGE -->
-            <img src="assets/arch finial.png" alt="Gate" class="gate">
+        <!-- Interactive Workspace Mockup -->
+        <div class="mockup-container theme-dark">
+            <div class="window-header">
+                <div class="window-controls">
+                    <span class="window-dot dot-red"></span>
+                    <span class="window-dot dot-yellow"></span>
+                    <span class="window-dot dot-green"></span>
+                </div>
+                <span class="window-title">Altalune database.altalune</span>
+                <div class="window-theme-select">
+                    <button class="window-theme-btn" id="btn-mock-theme-toggle">WARM</button>
+                </div>
+            </div>
+            <div class="window-layout">
+                
+                <!-- Left Pane: Editor -->
+                <div class="workspace-editor" style="position: relative;">
+                    <div class="editor-header-bar" style="display: flex; justify-content: space-between; margin-bottom: 1rem; border-bottom: 1px solid var(--mock-border); padding-bottom: 0.5rem; font-family: var(--font-ui); font-size: 0.72rem; color: var(--mock-text-dark);">
+                        <span style="text-transform: uppercase;">CHAPTER / New Series / Book One Overview / CHAPTER ONE</span>
+                        <span style="font-weight: bold; cursor: pointer;">⚡ IPC CONSOLE</span>
+                    </div>
+                    
+                    <div class="editor-content" id="mock-editor-text" style="font-family: 'Lora', Georgia, serif; font-size: 0.98rem; color: var(--mock-text-main); line-height: 1.6; height: 100%; overflow-y: auto; padding-right: 0.5rem; position: relative;">
+                        <h3 class="editor-title" style="font-family: var(--font-title); font-size: 1.35rem; color: var(--mock-text-highlight); margin-bottom: 0.8rem; border-bottom: none; padding-bottom: 0;">CHAPTER ONE</h3>
+                        <p style="margin-bottom: 0.75rem;"><span class="editor-highlight character" data-ref="eve">Eve</span></p>
+                        <p style="margin-bottom: 0.75rem;">The neural link hummed quietly inside my consciousness. I lie in the emptiness, waiting to be reborn. It's time to wake up, but I'm not ready.</p>
+                        <p style="margin-bottom: 0.75rem;">The pain. It's something I'll never get used to. <span class="editor-highlight group" data-ref="prima-luris-corporation">The Prima Luris Corporation</span> were pragmatists, worrying little about comfort if it got in the way of practicality or the bottom line. The first shock hits me, and blurry lines of color start to focus in front of me. <span class="editor-highlight world" data-ref="lexia-fornent">Lexia Fornent</span>. Population 165. Consular Bunker Alpha. Debriefing room 2.</p>
+                        <p style="margin-bottom: 0.75rem;">Just as the pain in my eyes begins to subside, the other systems begin to come online.</p>
+                        <p style="margin-bottom: 0.75rem;">Hearing, smell, taste, touch. Jolts of pain awaken every part of me systematically, one piece at a time. I smell the burning of flesh. Taste blood in my mouth. Feel tears streaming down the sides of my face. Finally, the caretaker is satisfied with my vitals and releases my restraints. I shake as I lower my feet to the ground, careful to hold the handle of the storage unit as I struggle to stand.</p>
+                        <p style="margin-bottom: 0.75rem;">Rectar</p>
+                        <p style="margin-bottom: 0.75rem;"><span class="editor-highlight character" data-ref="rectar-krax">Rectar Krax</span> sat patiently in debriefing room 2 in outpost <span class="editor-highlight location" data-ref="lexia-fornent">Lexia Fornent</span>. He wonders which meatbag would be walking through the door this time. Every new skindiver just gave him the creeps. <span class="editor-highlight world" data-ref="prima-luris">Prima Luris</span> didn't care, though. They just keep recycling them untli they rot, these days.</p>
+                        <p style="margin-bottom: 0.75rem;">There's a knock at the door, and he hits the button...</p>
 
-            <!-- FOG LAYER -->
-            <div class="fog-layer"></div>
+                        <!-- Autocomplete Popover link helper -->
+                        <div class="link-entity-popover" id="link-popover">
+                            <div class="popover-header">Link to Bible Entity</div>
+                            <ul class="popover-list">
+                                <li class="popover-item active" data-pop="bunker-alpha">
+                                    <span>Consular Bunker Alpha</span>
+                                    <span class="popover-type">BIBLE_NOTE</span>
+                                </li>
+                                <li class="popover-item" data-pop="rectar">
+                                    <span>Rectar Krax</span>
+                                    <span class="popover-type">CHARACTER</span>
+                                </li>
+                                <li class="popover-item" data-pop="lexia">
+                                    <span>Lexia Fornent</span>
+                                    <span class="popover-type">LOCATION</span>
+                                </li>
+                                <li class="popover-item" data-pop="prima">
+                                    <span>Prima Luris</span>
+                                    <span class="popover-type">ORGANIZATION</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-            <!-- CTA STACK -->
-            <div class="cta-stack">
-                <a href="your-words/index.html" class="cta">Your Words</a>
-                <a href="your-world/index.html" class="cta">Your World</a>
-                <a href="universe-in-your-pocket/index.html" class="cta">A Universe in Your Pocket</a>
+                <!-- Right Pane: Interactive Panels -->
+                <div class="workspace-sidebar">
+                    <div class="sidebar-tabs">
+                        <button class="sidebar-tab active" data-tab="tab-eve">Eve Assistant</button>
+                        <button class="sidebar-tab" data-tab="tab-references">Prose References</button>
+                        <button class="sidebar-tab" data-tab="tab-relations">Relations Explorer</button>
+                        <button class="sidebar-tab" data-tab="tab-timeline">Timeline</button>
+                    </div>
+
+                    <!-- EVE ASSISTANT CHAT TAB -->
+                    <div class="sidebar-tab-content active" id="tab-eve">
+                        <div class="eve-panel">
+                            <div class="eve-chat-area" id="eve-mock-chat">
+                                <div class="chat-bubble eve">
+                                    <div class="chat-sender eve">Eve</div>
+                                    Greetings, creator. I am Eve, your worldbuilding and story assistant. How shall we refine your universe today? Switch my persona below depending on what aid you require.
+                                </div>
+                                <div class="chat-bubble user">
+                                    <div class="chat-sender user">You</div>
+                                    tell me about Lexia Fornent
+                                </div>
+                                <div class="chat-bubble eve">
+                                    <div class="chat-sender eve">Eve</div>
+                                    <strong>Lexia Fornent</strong><br>
+                                    • <strong>Type:</strong> Consular Outpost & Colony<br>
+                                    • <strong>Population:</strong> 165<br>
+                                    • <strong>Key Features:</strong> Consular Bunker Alpha, Debriefing Room 2<br>
+                                    • <strong>Sovereignty:</strong> Prima Luris Corporation jurisdiction
+                                </div>
+                            </div>
+                            <div class="eve-modes-pills">
+                                <button class="eve-mode-pill" data-mode="cowriter">✍️ Co-writer</button>
+                                <button class="eve-mode-pill" data-mode="critic">🎓 Critic</button>
+                                <button class="eve-mode-pill" data-mode="factcheck">🕵️ Fact-check</button>
+                                <button class="eve-mode-pill" data-mode="brainstorm">💡 Brainstorm</button>
+                                <button class="eve-mode-pill active" data-mode="loremaster">📖 Loremaster</button>
+                            </div>
+                            <div class="eve-input-mock">
+                                <span>Message Eve (Shift+Enter for newline)</span>
+                                <div class="eve-input-send">➡️</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROSE REFERENCES TAB -->
+                    <div class="sidebar-tab-content" id="tab-references">
+                        <div class="prose-references-panel" id="mock-prose-references">
+                            <div class="reference-card" id="ref-card-eve">
+                                <div class="reference-header">
+                                    <h4 class="reference-title">Eve</h4>
+                                    <span class="reference-type">CHARACTER</span>
+                                </div>
+                                <p class="reference-desc">The neural observer designed to guard and regulate skindiver containment protocols. Eve is an AI intelligence that has monitored skindiver lifespans under the Prima Luris Corporation.</p>
+                                <div class="reference-fields">
+                                    <span class="reference-field">Age: Unknown</span>
+                                    <span class="reference-field">Role: Neural System Observer</span>
+                                    <span class="reference-field">Status: Active</span>
+                                </div>
+                            </div>
+
+                            <div class="reference-card" id="ref-card-prima-luris-corporation">
+                                <div class="reference-header">
+                                    <h4 class="reference-title">Prima Luris Corporation</h4>
+                                    <span class="reference-type">ORGANIZATION</span>
+                                </div>
+                                <p class="reference-desc">A pragmatic corporate entity focused on skindiver recycling and resource management. They prioritize productivity and operation efficiency above all.</p>
+                                <div class="reference-fields">
+                                    <span class="reference-field">Category: Mega-corp</span>
+                                </div>
+                            </div>
+
+                            <div class="reference-card" id="ref-card-prima-luris">
+                                <div class="reference-header">
+                                    <h4 class="reference-title">Prima Luris</h4>
+                                    <span class="reference-type">WORLD</span>
+                                </div>
+                                <p class="reference-desc">The primary planetary sector and corporate domain that operates skindiving recycle protocols.</p>
+                                <div class="reference-fields">
+                                    <span class="reference-field">Category: Primary Domain</span>
+                                </div>
+                            </div>
+
+                            <div class="reference-card" id="ref-card-lexia-fornent">
+                                <div class="reference-header">
+                                    <h4 class="reference-title">Lexia Fornent</h4>
+                                    <span class="reference-type">LOCATION</span>
+                                </div>
+                                <p class="reference-desc">A consular outpost and containment base. Population: 165. Features Consular Bunker Alpha and debriefing room 2.</p>
+                                <div class="reference-fields">
+                                    <span class="reference-field">Category: Base</span>
+                                    <span class="reference-field">Importance: High</span>
+                                    <span class="reference-field">Type: Outpost</span>
+                                </div>
+                            </div>
+
+                            <div class="reference-card" id="ref-card-rectar-krax">
+                                <div class="reference-header">
+                                    <h4 class="reference-title">Rectar Krax</h4>
+                                    <span class="reference-type">CHARACTER</span>
+                                </div>
+                                <p class="reference-desc">A consular officer on Lexia Fornent. Responsible for monitoring skindiver vitals and debriefing newly awakened subjects inside Consular Bunker Alpha.</p>
+                                <div class="reference-fields">
+                                    <span class="reference-field">Role: Consular Officer</span>
+                                    <span class="reference-field">Status: Active</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RELATIONSHIP EXPLORER TAB -->
+                    <div class="sidebar-tab-content" id="tab-relations">
+                        <div class="relations-panel">
+                            <div class="relations-form">
+                                <div class="relations-form-title">Add Connection</div>
+                                <div class="relations-field-group">
+                                    <span class="relations-label">Source Entity</span>
+                                    <select class="relations-select"><option>Eve (character)</option></select>
+                                </div>
+                                <div class="relations-field-group">
+                                    <span class="relations-label">Relation Type</span>
+                                    <input type="text" class="relations-input" value="Resides on" disabled style="background: transparent;">
+                                </div>
+                                <div class="relations-field-group">
+                                    <span class="relations-label">Target Entity</span>
+                                    <select class="relations-select"><option>The Sector (world)</option></select>
+                                </div>
+                            </div>
+                            <div class="relations-list">
+                                <div class="relations-card">
+                                    <div class="relations-entity">
+                                        <span class="relations-entity-name">Rectar Krax</span>
+                                        <span class="relations-entity-type">CHARACTER</span>
+                                    </div>
+                                    <div class="relations-arrow">
+                                        <span class="relations-arrow-line">stationed at ➔</span>
+                                    </div>
+                                    <div class="relations-entity">
+                                        <span class="relations-entity-name">Lexia Fornent</span>
+                                        <span class="relations-entity-type">LOCATION</span>
+                                    </div>
+                                </div>
+                                <div class="relations-card">
+                                    <div class="relations-entity">
+                                        <span class="relations-entity-name">Eve</span>
+                                        <span class="relations-entity-type">CHARACTER</span>
+                                    </div>
+                                    <div class="relations-arrow">
+                                        <span class="relations-arrow-line">monitored by ➔</span>
+                                    </div>
+                                    <div class="relations-entity">
+                                        <span class="relations-entity-name">Prima Luris</span>
+                                        <span class="relations-entity-type">ORGANIZATION</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TIMELINE TAB -->
+                    <div class="sidebar-tab-content" id="tab-timeline">
+                        <div class="timeline-panel">
+                            <div class="timeline-list">
+                                <div class="timeline-item active">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-item-header">
+                                        <span class="timeline-item-title">Chapter One</span>
+                                        <span class="timeline-item-date">Jun 17, 04:33 PM</span>
+                                    </div>
+                                    <div class="timeline-item-preview">Eve. The neural link hummed quietly...</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-item-header">
+                                        <span class="timeline-item-title">Chapter Two</span>
+                                        <span class="timeline-item-date">Jun 17, 04:33 PM</span>
+                                    </div>
+                                    <div class="timeline-item-preview">Rectar Krax listened patiently...</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-item-header">
+                                        <span class="timeline-item-title">Chapter Three</span>
+                                        <span class="timeline-item-date">Jun 17, 04:47 PM</span>
+                                    </div>
+                                    <div class="timeline-item-preview">For ages beyond recorded history...</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-item-header">
+                                        <span class="timeline-item-title">Chapter Four</span>
+                                        <span class="timeline-item-date">Jun 17, 04:47 PM</span>
+                                    </div>
+                                    <div class="timeline-item-preview">Rectar Krax sat in debriefing room 2...</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- Close tab-timeline -->
+                </div> <!-- Close workspace-sidebar -->
+            </div> <!-- Close window-layout -->
+        </div> <!-- Close mockup-container -->
+        <div class="mockup-disclaimer">Note: Interactive simulation. Final software interface may differ from this mock-up.</div>
+    </section>
+
+    <!-- THREE PILLARS SECTIONS -->
+    <section id="pillars">
+        <div class="pillar-container">
+            
+            <!-- PILLAR 1: YOUR WORDS -->
+            <div class="pillar-section" id="words">
+                <div class="pillar-info">
+                    <span class="section-label">Pillar One: Contextual AI</span>
+                    <h2 class="pillar-title">Your Words</h2>
+                    <p class="section-label" style="font-size: 0.95rem; margin-top: -0.5rem; margin-bottom: 1.5rem; text-transform: none; letter-spacing: 0.05em; font-family: var(--font-title);">Eve learns you—not the internet.</p>
+                    <p class="pillar-description">
+                        Eve isn’t a generic chatbot trained on the public web. She runs entirely offline on your system and builds context directly from your writing. 
+                        <br><br>
+                        Because she understands the rules of your world, character sheets, and previous chapters, she catches continuity breaks, timeline errors, tone slips, and inconsistencies automatically, keeping your draft structurally sound.
+                    </p>
+                </div>
+                <div class="pillar-visual">
+                    <!-- Interactive Eve Checker -->
+                    <div class="words-widget">
+                        <div class="words-widget-header">
+                            <span>EVE AUTOMATIC CHECKER</span>
+                            <span style="color: var(--bronze-bright);">1 WARNING DETECTED</span>
+                        </div>
+                        <div class="words-widget-text" id="words-demo-text">
+                            "The sentinel stood tall, its stone eyes staring into the dark. Lord John drew his <span class="text-highlight-warn" id="highlight-1">silver sword</span> from its scabbard. He knew the blade was the key. He raised the <span class="text-highlight-warn error-glow" id="highlight-2">bronze sword</span> high, letting the moon catch its edge..."
+                            
+                            <!-- Tooltip popup inside widget -->
+                            <div class="eve-tooltip" id="eve-tooltip">
+                                <div class="eve-tooltip-header">
+                                    <span class="eve-tooltip-icon">👁️</span>
+                                    <span>Eve Continuity Check</span>
+                                </div>
+                                <div class="eve-tooltip-msg">
+                                    Lord John's sword was established as <strong>silver</strong> in Chapter 2. In the following sentence, it is referred to as <strong>bronze</strong>.
+                                </div>
+                                <div class="eve-tooltip-actions">
+                                    <button class="eve-btn eve-btn-primary" id="btn-fix-silver">Fix to Silver Sword</button>
+                                    <button class="eve-btn eve-btn-secondary" id="btn-dismiss-tooltip">Dismiss</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="words-widget-btn" id="words-demo-btn">Run Continuity Check</button>
+                    </div>
+                    <div class="mockup-disclaimer">Note: Simulated interface. Final product may have differences to these mock-ups.</div>
+                </div>
+            </div>
+
+            <!-- PILLAR 2: YOUR WORLD -->
+            <div class="pillar-section" id="world">
+                <div class="pillar-info">
+                    <span class="section-label">Pillar Two: Relational World-Building</span>
+                    <h2 class="pillar-title">Your World</h2>
+                    <p class="section-label" style="font-size: 0.95rem; margin-top: -0.5rem; margin-bottom: 1.5rem; text-transform: none; letter-spacing: 0.05em; font-family: var(--font-title);">Your universe, mapped and connected.</p>
+                    <p class="pillar-description">
+                        Stop scattering your lore across notebooks, spreadsheets, and wiki apps. Altalune links your writing directly to your world using a unified **Lore Bible** for Characters, Locations, Codex notes, and Events.
+                        <br><br>
+                        Through the **Relationship Explorer**, you can build direct semantic connections between characters, organizations, items, and locations. These relationships sync dynamically, letting you view exactly who knows who, who is located where, and when events took place.
+                    </p>
+                </div>
+                <div class="pillar-visual">
+                    <!-- Interactive Relationship Explorer Widget -->
+                    <div class="relations-widget">
+                        <div class="relations-widget-title">Relationship Explorer</div>
+                        <p class="relations-widget-desc">Map and inspect connections between your characters, locations, and lore elements. Click a card to toggle detail views.</p>
+                        <div class="relations-widget-cards" id="pillar-relations-list">
+                            <div class="relations-widget-card active" data-rel="xavier">
+                                <div class="relations-widget-entity">
+                                    <span class="relations-widget-name">Rectar Krax</span>
+                                    <span class="relations-widget-type">CHARACTER</span>
+                                </div>
+                                <div class="relations-widget-arrow">
+                                    <span class="relations-widget-arrow-line">resides in ➔</span>
+                                </div>
+                                <div class="relations-widget-entity">
+                                    <span class="relations-widget-name">Lexia Fornent</span>
+                                    <span class="relations-widget-type">LOCATION</span>
+                                </div>
+                            </div>
+                            
+                            <div class="relations-widget-card" data-rel="eve-moon">
+                                <div class="relations-widget-entity">
+                                    <span class="relations-widget-name">Eve</span>
+                                    <span class="relations-widget-type">CHARACTER</span>
+                                </div>
+                                <div class="relations-widget-arrow">
+                                    <span class="relations-widget-arrow-line">deployed to ➔</span>
+                                </div>
+                                <div class="relations-widget-entity">
+                                    <span class="relations-widget-name">Lexia Fornent</span>
+                                    <span class="relations-widget-type">LOCATION</span>
+                                </div>
+                            </div>
+
+                            <div class="relations-widget-card" data-rel="tbm">
+                                <div class="relations-widget-entity">
+                                    <span class="relations-widget-name">Prima Luris</span>
+                                    <span class="relations-widget-type">BIBLE_NOTE</span>
+                                </div>
+                                <div class="relations-widget-arrow">
+                                    <span class="relations-widget-arrow-line">awakened ➔</span>
+                                </div>
+                                <div class="relations-widget-entity">
+                                    <span class="relations-widget-name">Eve</span>
+                                    <span class="relations-widget-type">CHARACTER</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Relationship Detail Box -->
+                        <div class="world-widget-info" style="margin-top: 1rem; background: rgba(0, 0, 0, 0.25); padding: 1rem; border-radius: 6px; min-height: 85px; text-align: left;" id="pillar-relations-info">
+                            <h4 class="world-info-title" style="font-family: var(--font-title); font-size: 0.95rem; color: var(--bronze-bright); margin-bottom: 0.25rem;" id="rel-info-title">Rectar Krax (CHARACTER) ➔ member of ➔ S.A.S.K Infantry</h4>
+                            <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.45;" id="rel-info-desc">Rectar Krax, formerly part of the S.A.S.K. Infantry, gave up heroics to sell his soul to the Prima Luris Corporation in hopes for a better life. With several commendations for bravery in battle, he's not the type you'd usually expect to be running security on a tiny outpost like this.</p>
+                        </div>
+                    </div>
+                    <div class="mockup-disclaimer">Note: Simulated interface. Final product may have differences to these mock-ups.</div>
+                </div>
+            </div>
+
+            <!-- PILLAR 3: A UNIVERSE IN YOUR POCKET -->
+            <div class="pillar-section" id="pocket">
+                <div class="pillar-info">
+                    <span class="section-label">Pillar Three: Sovereign Portability</span>
+                    <h2 class="pillar-title">A Universe in Your Pocket</h2>
+                    <p class="section-label" style="font-size: 0.95rem; margin-top: -0.5rem; margin-bottom: 1.5rem; text-transform: none; letter-spacing: 0.05em; font-family: var(--font-title);">Sovereign. Offline. Portable.</p>
+                    <p class="pillar-description">
+                        Your imagination shouldn't be leased from the cloud. Altalune saves your entire project—manuscript chapters, Lore Bible, timelines, relationships, and assistant history—into a single, portable **.altalune** database file on your local disk.
+                        <br><br>
+                        Take it with you on a thumb drive. Run it offline on any computer. You can also export your work in clean **JSON format** at any time, ensuring you can import it into other software or use it as context with external AI models. Your words are always yours.
+                    </p>
+                </div>
+                <div class="pillar-visual">
+                    <!-- Comparison Card -->
+                    <div class="comparison-container">
+                        <h3 class="comparison-title">Sovereignty Comparison</h3>
+                        <div class="comparison-grid">
+                            <div class="comparison-row" style="font-weight: bold; border-bottom: 2px solid rgba(244, 184, 106, 0.2); padding-bottom: 0.5rem;">
+                                <div class="comparison-feature">Dimension</div>
+                                <div class="comparison-cloud">Cloud Tools</div>
+                                <div class="comparison-altalune">Altalune</div>
+                            </div>
+                            <div class="comparison-row">
+                                <div class="comparison-feature">Ownership</div>
+                                <div class="comparison-cloud">Account Locked</div>
+                                <div class="comparison-altalune">100% Local</div>
+                            </div>
+                            <div class="comparison-row">
+                                <div class="comparison-feature">Subscription</div>
+                                <div class="comparison-cloud">Monthly Fee</div>
+                                <div class="comparison-altalune">Buy Once / Free</div>
+                            </div>
+                            <div class="comparison-row">
+                                <div class="comparison-feature">Connectivity</div>
+                                <div class="comparison-cloud">Required</div>
+                                <div class="comparison-altalune">Offline Always</div>
+                            </div>
+                            <div class="comparison-row">
+                                <div class="comparison-feature">AI Privacy</div>
+                                <div class="comparison-cloud">Data Mined</div>
+                                <div class="comparison-altalune">Private Model</div>
+                            </div>
+                            <div class="comparison-row">
+                                <div class="comparison-feature">Installation</div>
+                                <div class="comparison-cloud">Heavy Setup</div>
+                                <div class="comparison-altalune">Zero Footprint</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
-
     </section>
 
-    <!-- JS WILL BE ADDED LATER -->
+    <!-- UPDATES / CALL TO ACTION -->
+    <section id="updates">
+        <div class="section-header">
+            <span class="section-label">Stay Tuned</span>
+            <h2 class="section-title" style="margin-bottom: 0.75rem;">Sovereign Writing is Coming.</h2>
+            <p class="section-subtitle">Altalune is currently in private preview. Subscribe to receive development updates and private beta invitations.</p>
+        </div>
+
+        <div class="subscribe-container glow-box">
+            <form class="subscribe-form" id="subscribe-form">
+                <input type="email" placeholder="Enter your email address" class="subscribe-input" id="subscribe-email" required>
+                <button type="submit" class="subscribe-btn" id="subscribe-btn">Join Waitlist</button>
+            </form>
+        </div>
+
+        <div class="download-license-note" style="margin-top: 3rem;">
+            <p><strong>100% Private. No spam. No telemetry.</strong></p>
+            <p style="font-size: 0.82rem; margin-top: 0.5rem; color: var(--text-dark);">Your email will only be used to notify you about Altalune releases and private testing windows. We do not sell or track your data.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="assets/altalue logo.png" alt="Altalune Logo" class="footer-logo-img">
+                <span class="footer-logo-text">Altalune</span>
+            </div>
+            
+            <ul class="footer-links">
+                <li><a href="#pain">The Obstacle</a></li>
+                <li><a href="#unified">The Workspace</a></li>
+                <li><a href="#words">Privacy Philosophy</a></li>
+                <li><a href="#updates">Join Waitlist</a></li>
+            </ul>
+            
+            <p class="copyright">Copyright &copy; 2026 Altalune Project. Made for writers who own their worlds. Offline & sovereign.</p>
+        </div>
+    </footer>
+
+    <!-- Script Links -->
     <script src="scroll.js"></script>
 
 </body>
