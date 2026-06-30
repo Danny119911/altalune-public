@@ -251,7 +251,7 @@ const eveModeMessages = {
     cowriter: "<strong>Eve (Co-writer Mode):</strong> I am ready to act as your co-writer. I will keep you on task, suggest expansions for your drafts, and offer light stylistic advice as you write.",
     critic: "<strong>Eve (Critic Mode):</strong> Critic mode activated. I will read your prose with a critical eye, focusing on pacing, dialogue naturalism, and structural flow. Let me know if you would like editing exercises.",
     factcheck: "<strong>Eve (Fact-check Mode):</strong> Fact-check mode activated. I am scanning your text and cross-referencing names, events, and categories against the Lore Bible to catch timeline or description errors.",
-    brainstorm: "<strong>Eve (Brainstorm Mode):</strong> Brainstorming mode activated. Tell me what plot points, character arcs, or conflict resolutions you want to explore, and I'll generate ideas that respect past chapters.",
+    brainstorm: "<strong>Eve (Brainstorm Mode):</strong> Brainstorming mode activated. Tell me what plot points, character arcs, or conflict resolutions you want to explore, and we can flesh out your ideas in a way that respect past chapters.",
     loremaster: "<strong>Eve (Loremaster Mode):</strong> Loremaster mode active. Ask me direct questions about your universe, and I will retrieve strict factual summaries directly from your Lore Bible."
 };
 
