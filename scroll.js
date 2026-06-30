@@ -122,7 +122,7 @@ function runAutocompleteSimulation() {
         const textNode = document.createTextNode('');
         editorContent.insertBefore(textNode, cursor);
         
-        const phraseToType = " to open the door. He needs to check the [[";
+        const phraseToType = " to open it. He needs to check the [[";
         let charIndex = 0;
         
         function typeNextChar() {
@@ -159,7 +159,7 @@ function runAutocompleteSimulation() {
                     editorContent.insertBefore(linkSpan, cursor);
                     
                     // Add period after link
-                    const periodNode = document.createTextNode('.');
+                    const periodNode = document.createTextNode(' database for info about his guest.');
                     editorContent.insertBefore(periodNode, cursor);
                     
                     // Insert reference card into sidebar references panel
