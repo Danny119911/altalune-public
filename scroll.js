@@ -1,7 +1,7 @@
 // DOM Elements
 const headerNav = document.getElementById('main-nav');
-const gateWrapper = document.querySelector('.gate-wrapper');
-const gateLogo = document.querySelector('.gate-logo');
+const gateWrapper = document.querySelector('.logo-wrapper');
+const gateLogo = document.querySelector('.hero-logo');
 const scrollIndicator = document.querySelector('.scroll-indicator');
 const heroGlowBg = document.querySelector('.hero-glow-bg');
 
@@ -444,7 +444,11 @@ if (subscribeForm && subscribeInput && subscribeBtn) {
                 body: JSON.stringify({ email: emailVal })
             });
             
-            const data = await response.json();
+            let data = {};
+            const contentType = response.headers.get("content-type");
+            if (contentType && contentType.includes("application/json")) {
+                data = await response.json();
+            }
             
             if (response.ok && data.success) {
                 subscribeInput.value = '';
@@ -454,7 +458,7 @@ if (subscribeForm && subscribeInput && subscribeBtn) {
                 subscribeBtn.style.background = 'transparent';
                 subscribeBtn.style.boxShadow = 'none';
             } else {
-                throw new Error(data.error || 'Failed to submit form.');
+                throw new Error(data.error || `Server returned error status ${response.status}.`);
             }
         } catch (err) {
             console.error('Waitlist submission error:', err);
